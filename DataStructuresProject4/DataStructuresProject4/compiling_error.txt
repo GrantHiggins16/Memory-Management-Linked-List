@@ -1,0 +1,72 @@
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:105:62: error: reference to non-static member function must be called; did you mean to call it with no arguments?
+        LinkedList<DT>* newList = new LinkedList<DT>(*value, next);
+                                                             ^~~~
+                                                                 ()
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:371:21: note: in instantiation of member function 'LinkedList<Process>::add' requested here
+            mainMem.add(p);
+                    ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:106:16: error: no viable overloaded '='
+        *value = new DT(object);
+        ~~~~~~ ^ ~~~~~~~~~~~~~~
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:242:7: note: candidate function (the implicit copy assignment operator) not viable: no known conversion from 'Process *' to 'const Process' for 1st argument; dereference the argument with *
+class Process
+      ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:160:12: error: no viable conversion from returned value of type 'LinkedList<Process> *' to function return type 'LinkedList<Process>'
+    return nextLL;
+           ^~~~~~
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:105:62: note: in instantiation of member function 'LinkedList<Process>::next' requested here
+        LinkedList<DT>* newList = new LinkedList<DT>(*value, next);
+                                                             ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:371:21: note: in instantiation of member function 'LinkedList<Process>::add' requested here
+            mainMem.add(p);
+                    ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:19:5: note: candidate constructor not viable: no known conversion from 'LinkedList<Process> *' to 'const LinkedList<Process> &' for 1st argument; dereference the argument with *
+    LinkedList(LinkedList const &LL); // copy constructor
+    ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:51:12: error: assigning to 'LinkedList<Process> *' from incompatible type 'LinkedList<Process>'; take the address with &
+    nextLL = next;
+           ^ ~~~~
+             &
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:105:39: note: in instantiation of member function 'LinkedList<Process>::LinkedList' requested here
+        LinkedList<DT>* newList = new LinkedList<DT>(*value, next);
+                                      ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:371:21: note: in instantiation of member function 'LinkedList<Process>::add' requested here
+            mainMem.add(p);
+                    ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:79:20: error: no viable conversion from 'LinkedList<Process> *' to 'LinkedList<Process>'
+    LinkedList<DT> temp = nextLL;
+                   ^      ~~~~~~
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:400:33: note: in instantiation of member function 'LinkedList<Process>::size' requested here
+    for (int i = 0; i < mainMem.size(); i++)
+                                ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:19:5: note: candidate constructor not viable: no known conversion from 'LinkedList<Process> *' to 'const LinkedList<Process> &' for 1st argument; dereference the argument with *
+    LinkedList(LinkedList const &LL); // copy constructor
+    ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:230:15: error: member reference type 'const LinkedList<Process>' is not a pointer; did you mean to use '.'?
+    value = LL->info();
+            ~~^~
+              .
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:57:5: note: in instantiation of member function 'LinkedList<Process>::readLinkedList' requested here
+    readLinkedList(LL);
+    ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:334:7: note: in instantiation of member function 'LinkedList<Process>::LinkedList' requested here
+class MainMemory
+      ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:230:17: error: no matching member function for call to 'info'
+    value = LL->info();
+            ~~~~^~~~
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:26:9: note: candidate function not viable: 'this' argument has type 'const LinkedList<Process>', but method is not marked const
+    DT& info();//returns data from current node or null if list is empty
+        ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:27:9: note: candidate function not viable: requires single argument 'node', but no arguments were provided
+    DT& info(int node);//returns data from specific node or null if list is empty
+        ^
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:231:16: error: member reference type 'const LinkedList<Process>' is not a pointer; did you mean to use '.'?
+    nextLL = LL->next();
+             ~~^~
+               .
+/Users/Grant/Documents/Learning C++/DataStructuresProject4/DataStructuresProject4/main.cpp:232:11: error: member reference type 'const LinkedList<Process>' is not a pointer; did you mean to use '.'?
+    if (LL->next() == NULL)
+        ~~^~
+          .
+9 errors generated.
